@@ -1,85 +1,103 @@
 let count = 0;
 
 function start(id) {
-    count = count + 1;
+  count = count + 1;
 
-    if (count > 4) {
-        alert('You Cannot select more than 4 seats');
-        return;
-    }
+  if (count > 4) {
+    alert("You Cannot select more than 4 seats");
+    return;
+  }
 
-    const element = document.getElementById(id);
-    element.classList.remove('bg-[#F7F8F8]');
-    element.classList.add('bg-[#1DD100]');
-    const seatNumberElement = document.getElementById('seat-number');
-    const seatNumberElementText = seatNumberElement.innerText;
+  const element = document.getElementById(id);
+  element.classList.remove("bg-[#F7F8F8]");
+  element.classList.add("bg-[#1DD100]");
+  const seatNumberElement = document.getElementById("seat-number");
+  const seatNumberElementText = seatNumberElement.innerText;
 
-    const seatNumber = parseInt(seatNumberElementText);
- 
-    const updatedSeatNumber = seatNumber - 1;
-    
-    seatNumberElement.innerText = updatedSeatNumber;
+  const seatNumber = parseInt(seatNumberElementText);
 
-    const moneySeatElement = document.getElementById('money-seat');
-    const moneySeatElementText = moneySeatElement.innerText;
-    const moneySeat = parseInt(moneySeatElementText);
+  const updatedSeatNumber = seatNumber - 1;
 
-    const updatedMoneySeat = moneySeat + 1;
+  seatNumberElement.innerText = updatedSeatNumber;
 
-    moneySeatElement.innerText = updatedMoneySeat;
+  const moneySeatElement = document.getElementById("money-seat");
+  const moneySeatElementText = moneySeatElement.innerText;
+  const moneySeat = parseInt(moneySeatElementText);
 
-    let totalPriceElement = document.getElementById('total-price');
-    let totalPrice = updatedMoneySeat * 550;
+  const updatedMoneySeat = moneySeat + 1;
 
-    totalPriceElement.innerText = totalPrice;
+  moneySeatElement.innerText = updatedMoneySeat;
 
-    let ul = document.createElement('ul');
-    let li = document.createElement('li');
-    let liText = document.createElement('li');
-    let liPrice = document.createElement('li');
+  let totalPriceElement = document.getElementById("total-price");
+  let totalPrice = updatedMoneySeat * 550;
 
-    li.textContent = id;
-    liText.textContent = "Economy";
-    liPrice.textContent = "550";
+  totalPriceElement.innerText = totalPrice;
 
-    ul.appendChild(li);
-    ul.appendChild(liText);
-    ul.appendChild(liPrice);
+  let ul = document.createElement("ul");
+  let li = document.createElement("li");
+  let liText = document.createElement("li");
+  let liPrice = document.createElement("li");
 
-    let selectedContainer = document.getElementById('selected-container');
+  li.textContent = id;
+  liText.textContent = "Economy";
+  liPrice.textContent = "550";
 
-    selectedContainer.appendChild(ul);
+  ul.appendChild(li);
+  ul.appendChild(liText);
+  ul.appendChild(liPrice);
 
-    let grandtotal = document.getElementById('grand-total');
+  let selectedContainer = document.getElementById("selected-container");
 
-     grandtotal.innerText = totalPrice;
+  selectedContainer.appendChild(ul);
 
-    let click = document.getElementById('apply');
+  let grandtotal = document.getElementById("grand-total");
 
-     click.addEventListener('click', function () {
-         coupon(totalPrice);
-    })
+  grandtotal.innerText = totalPrice;
 
-    
+  let click = document.getElementById("apply");
+
+  click.addEventListener("click", function () {
+    coupon(totalPrice);
+  });
 }
 
 function coupon(totalPrice) {
-    let total = parseFloat(totalPrice);
-    console.log(total);
-        let couponElement = document.getElementById('coupon-text').value;
-        let grandtotal = document.getElementById('grand-total');
-        if (couponElement == 'NEW15') {
-            
-            grandtotal.innerText = total - (total * 0.15);
-    }
-        else if (couponElement == 'Couple 20') {
-            grandtotal.innerText = total - (total * 0.20);
-    }
-        else {
-            alert('Wrong Coupon');
-            grandtotal.innerText = totalPrice;
-    }
-
-
+  let total = parseFloat(totalPrice);
+  console.log(total);
+  let couponElement = document.getElementById("coupon-text").value;
+  let grandtotal = document.getElementById("grand-total");
+  if (couponElement == "NEW15") {
+    grandtotal.innerText = total - total * 0.15;
+  } else if (couponElement == "Couple 20") {
+    grandtotal.innerText = total - total * 0.2;
+  } else {
+    alert("Wrong Coupon");
+    grandtotal.innerText = totalPrice;
+  }
 }
 
+let nextBtn = document.getElementById("next-btn");
+let phoneNumberTextElement = document.getElementById("phone-number");
+
+phoneNumberTextElement.addEventListener("click", function () {
+  const numberTextElement = document.getElementById("phone-number");
+  const numberText = numberTextElement.innerText;
+  const number = parseInt(numberText);
+
+  if (!isNaN(number)) {
+    nextBtn.disabled = false;
+  } else {
+    nextBtn.disabled = true;
+  }
+});
+
+function nextPage() {
+  const elementMain = document.getElementById("main-part");
+  elementMain.classList.add("hidden");
+  const elementSecondMain = document.getElementById("second-part");
+  elementSecondMain.classList.remove("hidden");
+}
+
+function scrollDown() {
+  window.scrollBy(0, 2000);
+}
