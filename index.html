@@ -12,18 +12,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <style>
       .font-raleway {
         font-family: "Raleway", sans-serif;
       }
+
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      main ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .green {
+        color: white;
+        background-color: yellowgreen;
+        padding: 0 8px 0 8px;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body class="font-raleway">
-    <header class="max-w-[80%] mx-auto">
+    <header class="max-w-[1170px] w-[80%] mx-auto">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -155,26 +173,272 @@
           <div class="flex bg-[#F78C9C] px-12 rounded-3xl mb-7">
             <div class="flex justify-center items-center">
               <div class="mr-10">
-                <h1 class="font-extrabold text-2xl lg:text-5xl">15% OFF</h1>
+                <h1 class="font-extrabold text-2xl lg:text-5xl">20% OFF</h1>
                 <h4 class="font-bold text-sm">on your next purchase</h4>
                 <p class="text-sm">use by January 2024</p>
               </div>
               <img src="./images/cupon-devider.png" alt="" />
               <div class="ml-10">
-                <h1 class="font-bold text-center">NEW15</h1>
+                <h1 class="font-bold text-center">Couple 20</h1>
                 <p class="">Coupon Code</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-[128px] mx-auto mb-32">
-        <button class="btn btn-outline border border-[#1DD100] text-[#1DD100]">See All Offer</button>
+      <div class="lg:w-[128px] mx-auto mb-32">
+        <button class="btn btn-outline border border-[#1DD100] text-[#1DD100]">
+          See All Offer
+        </button>
       </div>
     </header>
-    <main class="bg-[#F7F8F8]">
-        div
+    <main class="bg-[#F7F8F8] rounded-t-[80px] border border-t-[#1DD100]">
+      <div class="">
+        <h1 class="text-center font-bold text-3xl mb-5 pt-20">P.H Paribahan</h1>
+        <p class="text-center pb-10">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated <br />
+          testing features allow for a streamlined .
+        </p>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row max-w-[1170px] w-[80%] mx-auto bg-white justify-between rounded-3xl mb-10"
+      >
+        <div class="p-6 lg:p-16 -mb-[500px] lg:-mb-0">
+          <div class="flex justify-between">
+            <div class="flex justify-between">
+              <div class="w-8 lg:w-16">
+                <img src="./images/bus-logo.png" alt="" />
+              </div>
+              <div>
+                <h1 class="lg:font-bold text-sm lg:text-2xl">
+                  Greenline Paribahan
+                </h1>
+                <p class="font-inter text-xs">Ac business</p>
+              </div>
+            </div>
+            <div>
+              <button
+                class="btn flex flex-col lg:flex-row btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-[#1DD10066]"
+              >
+                <div class="">
+                  <img
+                    class="invisible lg:visible"
+                    src="./images/seat-green.png"
+                    alt=""
+                  />
+                </div>
+                <span id="seat-number" class="lg:font-bold font-inter text-[#1DD100] text-sm"
+                  >8</span
+                >
+                <p
+                  class="font-inter text-[#1DD100] text-sm lg:text-base pr-16 lg:pr-0"
+                >
+                  Seats
+                </p>
+              </button>
+            </div>
+          </div>
+          <div class="bg-[#F7F8F8] p-2 lg:p-10 mt-5 rounded-2xl">
+            <div class="flex justify-between mb-5">
+              <h1>Route</h1>
+              <h1 class="font-extrabold">Dhaka - Sylhet</h1>
+            </div>
+            <img src="./images/Line 1.png" alt="" />
+            <div class="flex justify-between mb-5 mt-5">
+              <h1>Departure Time</h1>
+              <h1 class="font-extrabold">9:00 PM</h1>
+            </div>
+            <img src="./images/Line 1.png" alt="" />
+            <div class="flex mt-5">
+              <h1 class="bg-[#0307120D] p-1 lg:p-5 mr-3 lg:mr-10 rounded-lg">
+                Boarding Point - Laxmipur
+              </h1>
+              <h1 class="bg-[#0307120D] p-1 lg:p-5 mr-3 lg:mr-10 rounded-lg">
+                Dropping Point - Bogura
+              </h1>
+              <h1 class="bg-[#0307120D] p-1 lg:p-5 rounded-lg">
+                Est. Time - 11 Hour
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="lg:-mx-4 invisible lg:visible">
+          <img src="./images/info-devider.png" alt="" />
+        </div>
+        <div class="lg:ml-2 lg:mr-12 flex flex-col justify-center items-center">
+          <div class="invisible lg:visible">
+            <img src="./images/fare.png" alt="" />
+          </div>
+          <div class="invisible lg:visible">
+            <h1 class="text-center font-extrabold text-lg lg:text-3xl">550</h1>
+            <p class="text-center">Per Seat</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1170px] w-[80%] mx-auto bg-white">
+        <div class="grid lg:grid-cols-3">
+          <div class="lg:col-span-2 p-8">
+            <div class="mt-6 mb-5"><h1>Select Your Seat</h1></div>
+            <img src="./images/Line 2.png" alt="" />
+            <div class="flex justify-between mt-5">
+              <div class="flex">
+                <img src="./images/seat-gray.png" alt="" />
+                <h1 class="font-inter">Available</h1>
+              </div>
+              <div class="flex">
+                <img src="./images/seat-green-filled.png" alt="" />
+                <h1 class="font-inter">Selected</h1>
+              </div>
+            </div>
+            <div class="mt-5"><img src="./images/Line 2.png" alt="" /></div>
+            <div class="">
+              <div class="flex justify-end mt-6">
+                <div class="px-1 py-1 bg-[#F7F8F8] rounded-2xl">
+                  <img src="./images/tabler-icon-steering-wheel.png" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between mt-6">
+                <div class="flex">
+                  <h1 class="px-1 py-4 font-inter">A</h1>
+                  <button onclick="start('A1')"
+                    id="A1"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    A1
+                  </button>
+                  <button onclick="start('A2')"
+                    id="A2"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    A2
+                  </button>
+                </div>
+                <div class="flex">
+                  <button onclick="start('A3')"
+                    id="A3"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    A3
+                  </button>
+                  <button onclick="start('A4')"
+                    id="A4"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    A4
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between mt-6">
+                <div class="flex">
+                  <h1 class="px-1 py-4 font-inter">B</h1>
+                  <button onclick="start('B1')"
+                    id="B1"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    B1
+                  </button>
+                  <button onclick="start('B2')"
+                    id="B2"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    B2
+                  </button>
+                </div>
+                <div class="flex">
+                  <button onclick="start('B3')"
+                    id="B3"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    B3
+                  </button>
+                  <button onclick="start('B4')"
+                    id="B4"
+                    class="selected-btn px-2 lg:px-11 py-1 lg:py-4 font-inter bg-[#F7F8F8] ml-1 lg:ml-4 mr-1 lg:mr-8 rounded-2xl"
+                  >
+                    B4
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 mt-6 mb-5 px-2 lg:px-8 pt-8">
+            <h1 class="pb-5">Select Your Seat</h1>
+            <img src="./images/Line 4.png" alt="" />
+            <div class="bg-[#F7F8F8] p-2 lg:p-8 mt-5 roun">
+              <div id="selected-container" class="font-inter">
+                <ul class="">
+                  <li>
+                    Seat<span class="green"><sup id="money-seat">0</sup></span>
+                  </li>
+                  <li>Class</li>
+                  <li>Price</li>
+                </ul>
+                <div class="mt-5">
+                  <img src="./images/Line 4.png" alt="" />
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="flex justify-between">
+                <h1 class="font-inter">Total Price</h1>
+                <h1>BDT <span id="total-price" class="font-inter">0</span></h1>
+              </div>
+              <div class="flex mt-4">
+                <input id="coupon-text"
+                  class="pl-2 lg:pl-5 py-2 lg:py-5 pr-4 lg:pr-10 relative rounded-2xl"
+                  type="text"
+                  placeholder="Any coupon?"
+                />
+                <button  id="apply"
+                  class="px-1 lg:px-4 font-inter py-1 lg:py-4 text-white bg-[#1DD100] lg:-translate-x-16 rounded-2xl"
+                >
+                  Apply
+                </button>
+              </div>
+              <div class="flex justify-between mt-6">
+                <h1 class="font-inter">Grand Total</h1>
+                <h1 class="font-inter">BDT <span id="grand-total">0</span></h1>
+              </div>
+            </div>
+            <div>
+              <h1 class="mt-6 mb-4">Passenger Name*</h1>
+              <input
+                class="pl-2 lg:pl-6 py-2 lg:py-6 pr-2 lg:pr-7"
+                type="text"
+                placeholder="Enter your name"
+              />
+              <h1 class="mt-6 mb-4">Phone Number*</h1>
+              <input
+                class="pl-2 lg:pl-6 py-2 lg:py-6 pr-2 lg:pr-7"
+                type="number"
+                placeholder="Enter your number"
+              />
+              <h1 class="mt-6 mb-4">Email ID</h1>
+              <input
+                class="pl-2 lg:pl-6 py-2 lg:py-6 pr-2 lg:pr-7"
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your email id"
+              />
+              <br />
+              <div class="text-center mt-6">
+                <button
+                  class="bg-[#1DD100] px-5 lg:px-24 py-6 text-white rounded-2xl"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="flex mt-5 justify-between">
+              <a href="#" class="text-xs underline">Terms and Conditions</a>
+              <a href="#" class="text-xs underline">Cancellation Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <script src="./scripts/scripts.js"></script>
+     
   </body>
 </html>
