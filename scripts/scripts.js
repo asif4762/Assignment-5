@@ -80,16 +80,15 @@ let nextBtn = document.getElementById("next-btn");
 let phoneNumberTextElement = document.getElementById("phone-number");
 
 phoneNumberTextElement.addEventListener("click", function () {
-  const numberTextElement = document.getElementById("phone-number");
-  const numberText = numberTextElement.innerText;
-  const number = parseInt(numberText);
-
-  if (!isNaN(number)) {
+  let numberText = phoneNumberTextElement.innerText
+  let number = parseInt(numberText);
+  if (typeof number === "number") {
     nextBtn.disabled = false;
   } else {
     nextBtn.disabled = true;
   }
 });
+
 
 function nextPage() {
   const elementMain = document.getElementById("main-part");
@@ -100,4 +99,8 @@ function nextPage() {
 
 function scrollDown() {
   window.scrollBy(0, 2000);
+}
+
+function returnFunction() {
+   location.reload();
 }
