@@ -39,7 +39,7 @@ function start(id) {
   let liPrice = document.createElement("li");
 
   li.textContent = id;
-  liText.textContent = "Economy";
+  liText.textContent = "economy";
   liPrice.textContent = "550";
 
   ul.appendChild(li);
