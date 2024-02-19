@@ -3,6 +3,13 @@ let count = 0;
 function start(id) {
   count = count + 1;
 
+  if (count === 4) {
+    const applyButton = document.getElementById("apply");
+    applyButton.disabled = false;
+    applyButton.classList.remove("bg-[#F7F8F8]");
+    applyButton.classList.add("bg-[#1DD100]");
+  }
+
   if (count > 4) {
     alert("You Cannot select more than 4 seats");
     return;
@@ -11,6 +18,10 @@ function start(id) {
   const element = document.getElementById(id);
   element.classList.remove("bg-[#F7F8F8]");
   element.classList.add("bg-[#1DD100]");
+  if (!element.disabled) {
+    element.disabled = true;
+  }
+
   const seatNumberElement = document.getElementById("seat-number");
   const seatNumberElementText = seatNumberElement.innerText;
 
@@ -59,28 +70,24 @@ function start(id) {
   click.addEventListener("click", function () {
     coupon(totalPrice);
   });
-
-  if (count <= 4 && count > 0) {
-    return count;
-  }
 }
 
 function coupon(totalPrice) {
   let total = parseFloat(totalPrice);
   console.log(total);
-  let couponBtn = document.getElementById('coupon-btn');
+  let couponBtn = document.getElementById("coupon-btn");
   let couponElement = document.getElementById("coupon-text").value;
   let grandtotal = document.getElementById("grand-total");
   if (couponElement == "NEW15") {
-    grandtotal.innerText = total - total * 0.15;
-    couponBtn.classList.add('hidden');
-  } else if (couponElement == "Couple 20") {
-    grandtotal.innerText = total - total * 0.2;
-    couponBtn.classList.add('hidden');
-  } else {
-    alert("Wrong Coupon");
-    grandtotal.innerText = totalPrice;
-  }
+      grandtotal.innerText = total - total * 0.15;
+      couponBtn.classList.add("hidden");
+    } else if (couponElement == "Couple 20") {
+      grandtotal.innerText = total - total * 0.2;
+      couponBtn.classList.add("hidden");
+    } else {
+      alert("Wrong Coupon");
+      grandtotal.innerText = totalPrice;
+    }
 }
 
 let nextBtn = document.getElementById("next-btn");
@@ -89,22 +96,16 @@ nextBtn.setAttribute("disabled", "true");
 let phoneNumberInputElement = document.getElementById("phone-number");
 
 phoneNumberInputElement.addEventListener("input", function () {
-  let numberText = phoneNumberInputElement.value; 
-  // console.log(numberText);
+  let numberText = phoneNumberInputElement.value;
 
-  if (numberText.trim() !== "") { 
-     nextBtn.removeAttribute("disabled");
+  if (numberText.trim() !== "") {
+    nextBtn.removeAttribute("disabled");
   } else {
-     nextBtn.setAttribute("disabled", "true");
+    nextBtn.setAttribute("disabled", "true");
   }
 });
 
-
-
-
-
 function nextPage() {
-  
   const elementMain = document.getElementById("main-part");
   elementMain.classList.add("hidden");
   const elementSecondMain = document.getElementById("second-part");
@@ -116,5 +117,5 @@ function scrollDown() {
 }
 
 function returnFunction() {
-   location.reload();
+  location.reload();
 }
