@@ -59,6 +59,10 @@ function start(id) {
   click.addEventListener("click", function () {
     coupon(totalPrice);
   });
+
+  if (count <= 4 && count > 0) {
+    return count;
+  }
 }
 
 function coupon(totalPrice) {
@@ -77,20 +81,27 @@ function coupon(totalPrice) {
 }
 
 let nextBtn = document.getElementById("next-btn");
-let phoneNumberTextElement = document.getElementById("phone-number");
+nextBtn.setAttribute("disabled", "true");
 
-phoneNumberTextElement.addEventListener("click", function () {
-  let numberText = phoneNumberTextElement.innerText
-  let number = parseInt(numberText);
-  if (typeof number === "number") {
-    nextBtn.disabled = false;
+let phoneNumberInputElement = document.getElementById("phone-number");
+
+phoneNumberInputElement.addEventListener("input", function () {
+  let numberText = phoneNumberInputElement.value; 
+  // console.log(numberText);
+
+  if (numberText.trim() !== "") { 
+     nextBtn.removeAttribute("disabled");
   } else {
-    nextBtn.disabled = true;
+     nextBtn.setAttribute("disabled", "true");
   }
 });
 
 
+
+
+
 function nextPage() {
+  
   const elementMain = document.getElementById("main-part");
   elementMain.classList.add("hidden");
   const elementSecondMain = document.getElementById("second-part");
