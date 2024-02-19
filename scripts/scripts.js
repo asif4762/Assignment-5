@@ -68,12 +68,15 @@ function start(id) {
 function coupon(totalPrice) {
   let total = parseFloat(totalPrice);
   console.log(total);
+  let couponBtn = document.getElementById('coupon-btn');
   let couponElement = document.getElementById("coupon-text").value;
   let grandtotal = document.getElementById("grand-total");
   if (couponElement == "NEW15") {
     grandtotal.innerText = total - total * 0.15;
+    couponBtn.classList.add('hidden');
   } else if (couponElement == "Couple 20") {
     grandtotal.innerText = total - total * 0.2;
+    couponBtn.classList.add('hidden');
   } else {
     alert("Wrong Coupon");
     grandtotal.innerText = totalPrice;
